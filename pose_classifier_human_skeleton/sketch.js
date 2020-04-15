@@ -4,7 +4,7 @@ let pose;
 let skeleton;
 
 function setup(){
-    createP('HUMAN SKELETON ( Try to get full body in the frame)');
+    createP('HUMAN POSE CLASSIFIER ( Try to get full body in the frame)');
     createCanvas(720,600);
     video = createCapture(VIDEO);
     video.hide(); 
@@ -49,9 +49,9 @@ function draw(){
         fill(0,255,0);
         ellipse(x,y,16,16);
         // display body part name
-        let bodypart = pose.keypoints[i].part;
-        textSize(20);
-        text(bodypart, x, y);
+        //let bodypart = pose.keypoints[i].part;
+      //  textSize(20);
+        //text(bodypart, x, y);
         // display accuracy
         // let score = pose.keypoint[i].score;
         // text(score, x, y);
