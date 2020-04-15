@@ -5,7 +5,7 @@ let skeleton;
 
 function setup(){
     createP('HUMAN POSE CLASSIFIER ( Try to get full body in the frame)');
-    createCanvas(720,600);
+    createCanvas(640, 480);
     video = createCapture(VIDEO);
     video.hide(); 
     background(240);
