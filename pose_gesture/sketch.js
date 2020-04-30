@@ -49,9 +49,9 @@ function setup(){
     }
      brain = ml5.neuralNetwork(options);
     const modelDetails = {
-       model: 'model/model.json',
-       metadata: 'model/model_meta.json',
-       weights: 'model/model.weights.bin'
+       model: 'model2/model.json',
+       metadata: 'model2/model_meta.json',
+       weights: 'model2/model.weights.bin'
      };
    
  brain.load(modelDetails,brainLoaded);
@@ -80,7 +80,7 @@ function setup(){
 
         function gotResult(error, results){
        
-            if(results[0].confidence){
+            if(results[0].confidence>0.5){
             poselabel = results[0].label.toUpperCase();
              console.log(results[0].label);
             console.log(results[0].confidence);
